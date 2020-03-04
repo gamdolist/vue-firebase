@@ -24,6 +24,11 @@ const routes = [
     component: () => import('../views/About2.vue')
   },
   {
+    path: '/v-list',
+    name: 'v-list',
+    component: () => import('../views/v-list.vue')
+  },
+  {
     path: '*',
     component: () => import('../views/e404.vue')
   }
