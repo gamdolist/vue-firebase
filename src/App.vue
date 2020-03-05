@@ -1,5 +1,8 @@
 <template>
   <v-app>
+      <v-navigation-drawer v-model="drawer" fixed app>
+        <navigation-left/>>
+      </v-navigation-drawer>
       <v-card
         color="grey lighten-4"
         flat
@@ -7,7 +10,7 @@
         tile
       >
       <v-toolbar :dark="true">
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <v-app-bar-nav-icon @click="onNavigationLeft"></v-app-bar-nav-icon>
 
         <v-toolbar-title>Title</v-toolbar-title>
 
@@ -40,17 +43,24 @@
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld'
+import NavigationLeft from './components/NavigationLeft'
 
 export default {
   name: 'App',
 
   components: {
-    // HelloWorld
+    NavigationLeft
   },
-
-  data: () => ({
-    //
-  })
+  methods: {
+    onNavigationLeft(e) {
+      console.log('cki')
+      this.drawer = !this.drawer
+    }
+  },
+  data() {
+    return {
+      drawer: false
+    }
+  }
 }
 </script>
