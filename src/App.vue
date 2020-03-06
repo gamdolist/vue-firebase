@@ -1,15 +1,15 @@
 <template>
   <v-app>
-      <v-navigation-drawer v-model="drawer" fixed app>
-        <navigation-left/>>
+      <v-navigation-drawer v-model="drawer" fixed>
+        <navigation-left/>
       </v-navigation-drawer>
-      <v-card
+      <v-card dark fixed app
         color="grey lighten-4"
         flat
         height="65px"
         tile
       >
-      <v-toolbar :dark="true">
+      <v-toolbar>
         <v-app-bar-nav-icon @click="onNavigationLeft"></v-app-bar-nav-icon>
 
         <v-toolbar-title>Title</v-toolbar-title>
@@ -33,7 +33,7 @@
           </v-btn>
         </v-toolbar-items>
       </v-toolbar>
-  </v-card>
+    </v-card>
 
     <v-content>
       <!-- <HelloWorld/> -->
@@ -44,6 +44,7 @@
 
 <script>
 import NavigationLeft from './components/NavigationLeft'
+// import SideBar from './components/SideBar'
 
 export default {
   name: 'App',
@@ -59,7 +60,7 @@ export default {
   },
   data() {
     return {
-      drawer: false
+      drawer: true
     }
   }
 }

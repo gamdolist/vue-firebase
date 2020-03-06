@@ -12,7 +12,7 @@
 
 export default {
   name: 'Home',
-  data () {
+  data() {
     return {
       items: [
         { id: 0, text: 'Vegetables' },

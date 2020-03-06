@@ -24,6 +24,14 @@ const routes = [
     component: () => import('../views/About2.vue')
   },
   {
+    path: '/lectures/card',
+    component: () => import('../views/lectures/card.vue')
+  },
+  {
+    path: '/lectures/layout',
+    component: () => import('../views/lectures/layout.vue')
+  },
+  {
     path: '*',
     component: () => import('../views/e404.vue')
   }
