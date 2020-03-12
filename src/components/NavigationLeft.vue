@@ -72,6 +72,21 @@ export default {
               title: 'layout',
               to: '/lectures/layout',
               icon: 'mdi-alert-box'
+            },
+            {
+              title: 'notes',
+              to: '/lectures/notes',
+              icon: 'mdi-alert-box'
+            },
+            {
+              title: 'axios',
+              to: '/lectures/axios',
+              icon: 'mdi-alert-box'
+            },
+            {
+              title: 'mother',
+              to: '/lectures/mother',
+              icon: 'mdi-alert-box'
             }
           ]
         }
