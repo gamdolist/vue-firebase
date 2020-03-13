@@ -87,6 +87,11 @@ export default {
               title: 'mother',
               to: '/lectures/mother',
               icon: 'mdi-alert-box'
+            },
+            {
+              title: 'vuex',
+              to: '/lectures/vuex',
+              icon: 'mdi-alert-box'
             }
           ]
         }

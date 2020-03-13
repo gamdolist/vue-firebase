@@ -12,7 +12,7 @@
       <v-toolbar>
         <v-app-bar-nav-icon @click="onNavigationLeft"></v-app-bar-nav-icon>
 
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-toolbar-title>{{$store.state.user ? $store.state.user.displayName : 'Not LogIn'}}</v-toolbar-title>
 
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down">

@@ -19,6 +19,10 @@ Login
     <v-icon>mdi-email</v-icon>
     E-Mail Login
   </v-btn>
+  <v-btn color="primary" @click="signOut">
+    <v-icon>mdi-log-out</v-icon>
+    SignOut
+  </v-btn>
 </v-card-actions>
 </v-card>
 </template>
@@ -42,12 +46,17 @@ export default {
 
       const r = await this.$firebase.auth().signInWithPopup(provider)
 
-      console.log(r)
+      console.log("sigInWithGoogle:" + r)
     },
     async signInWithEmail() {
-      console.log("starting...email authorization")
+      console.log("starting...signInWithEmail")
       const r = await this.$firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-      console.log(r)
+      console.log("signInWithEmail:" + r)
+    },
+    async signOut() {
+      console.log("starting...signOut")
+      const r = await this.$firebase.auth().signOut()
+      console.log("signOut" + r)
     }
   }
 }

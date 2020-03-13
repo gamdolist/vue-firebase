@@ -1,7 +1,7 @@
 <template>
-  <div>
-    {{name}}
-  </div>
+  <v-card>
+    <v-card-title>{{name}}</v-card-title>
+  </v-card>
 </template>
 
 <script>
